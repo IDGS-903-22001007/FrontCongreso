@@ -53,9 +53,11 @@ export default function Participantes() {
 
       <div className="container mt-4">
         <h2 className="text-center mb-4 text-primary fw-bold">Listado de Participantes</h2>
-        <div className="d-flex justify-content-between align-items-center my-4 p-3 bg-light rounded shadow-sm">
+        <div className="d-flex flex-column flex-md-row justify-content-md-between align-items-stretch align-items-md-center gap-3 my-4 p-3 bg-light rounded shadow-sm">
           <SearchBar onSearch={load} />
-          <Link to="/registro" className="btn btn-primary btn-lg">Registrar</Link>
+          <Link to="/registro" className="btn btn-primary btn-lg flex-shrink-0">
+            Registrar
+          </Link>
         </div>
 
         {loading ? (
