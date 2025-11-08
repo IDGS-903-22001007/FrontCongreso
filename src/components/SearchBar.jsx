@@ -9,15 +9,17 @@ export default function SearchBar({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-bar d-flex">
+    <form onSubmit={handleSubmit} className="search-bar d-flex flex-column flex-sm-row align-items-sm-center gap-2">
       <input
         type="text"
         placeholder="Buscar por nombre o apellidos"
         value={q}
         onChange={(e) => setQ(e.target.value)}
-        className="form-control me-2"
+        className="form-control"
       />
-      <button type="submit" className="btn btn-primary">Buscar</button>
+      <button type="submit" className="btn btn-primary w-100 w-sm-auto">
+        Buscar
+      </button>
     </form>
   );
 }
