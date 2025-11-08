@@ -1,4 +1,7 @@
 const API = import.meta.env.VITE_API_URL || "https://backcongreso.onrender.com";
+
+
+
 export async function fetchListado(q) {
   const url = q ? `${API}/api/listado?q=${encodeURIComponent(q)}` : `${API}/api/listado`;
   const res = await fetch(url);
